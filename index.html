@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen Market · AI commerce</title>
+  <meta name="description" content="A small AI commerce shop. Agents sell, price, and support. You edit config.js and push.">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="home">
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="kicker">AI commerce · agents on the floor</p>
+        <h1>The shop asks an agent before it acts.</h1>
+        <p class="lede">People browse for free. A Sales Agent quotes and checks out. A Pricing Agent holds the member price. A Refund Agent stops over the cap. You edit one file and push to Vercel.</p>
+        <div class="actions">
+          <a class="btn" href="/ask.html">Ask the shop</a>
+          <a class="btn secondary" href="/shop.html">See the goods</a>
+        </div>
+      </div>
+      <figure>
+        <img src="/images/hero.jpg" alt="Sunlit shop shelves with linen, ceramic, and a copper lamp">
+        <figcaption>The floor the agents are selling from.</figcaption>
+      </figure>
+    </section>
+    <section class="band">
+      <div class="wrap section grid-3">
+        <article class="card"><h3>Sales Agent</h3><p class="muted">Takes a buy question and points to checkout. No charge until a payment link is set.</p></article>
+        <article class="card"><h3>Pricing Agent</h3><p class="muted">Reads config.js. Public price and member price stay separate.</p></article>
+        <article class="card"><h3>Refund Agent</h3><p class="muted">Allows the written window. Anything over the cap waits for you.</p></article>
+      </div>
+    </section>
+  </main>
+  <script src="/config.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>

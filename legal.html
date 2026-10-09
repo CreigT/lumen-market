@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plain legal · Lumen Market</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="legal">
+  <main class="wrap section">
+    <p class="kicker">Legal layer, plain version</p>
+    <h1>The short rules.</h1>
+    <article class="card">
+      <h3>Who owns this</h3>
+      <p>The human who deploys this project is the legal owner. Agents are software operators. They do not own the company, the customer list, or the money.</p>
+      <h3>Payments</h3>
+      <p>Live charges happen only through Stripe, and only after you set the secret key and price IDs. Demo mode never charges a card.</p>
+      <h3>Refunds</h3>
+      <p>Physical goods: 14 days, unused. Atelier members: 30 days. Digital notes are delivered immediately, so one-time digital purchases are refundable only if the file was not opened, unless the law where the buyer lives says otherwise.</p>
+      <h3>Privacy</h3>
+      <p>Checkout collects name and email to fulfill the order and send the receipt. The events API logs event type, time, and a random id. Do not send card numbers to this app. Stripe holds the card.</p>
+      <h3>Emergency stop</h3>
+      <p>The owner desk can emit an emergency stop event. Agents must halt new irreversible charges when they receive it. Already-paid orders still ship unless you refund them in Stripe.</p>
+    </article>
+  </main>
+  <script src="/config.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "store": {
+    "name": "Lumen Market",
+    "promise": "A small shop that runs itself. You set the variables. The agents do the rest.",
+    "supportEmail": "hello@lumenmarket.example"
+  },
+  "products": [
+    {
+      "sku": "TOTE-OAT",
+      "name": "Oat field tote",
+      "price": 48,
+      "memberPrice": 43,
+      "type": "physical",
+      "gated": false,
+      "image": "/images/tote.jpg",
+      "blurb": "A quiet everyday bag. Heavy linen, short handles, one inside pocket.",
+      "details": "Made for market runs and laptops that do not need a speech. Holds a notebook, a bottle, and a small haul. Spot clean. Ships in 3 to 5 days once the Inventory Agent confirms stock."
+    },
+    {
+      "sku": "CARAFE-SAND",
+      "name": "Sand pour-over carafe",
+      "price": 64,
+      "memberPrice": 58,
+      "type": "physical",
+      "gated": false,
+      "image": "/images/carafe.jpg",
+      "blurb": "Matte ceramic. Holds enough for two cups and no more.",
+      "details": "Hand-finished stoneware in a warm sand glaze. Not dishwasher safe. The Pricing Agent reviews this price weekly against supplier cost and return rate."
+    },
+    {
+      "sku": "THROW-COPPER",
+      "name": "Copper stripe throw",
+      "price": 128,
+      "memberPrice": 115,
+      "type": "physical",
+      "gated": false,
+      "image": "/images/throw.jpg",
+      "blurb": "Merino blend. Cream and copper. For the end of the sofa.",
+      "details": "Lightweight enough for a desk chair, warm enough for a late evening. Dry clean. Member price applies after the Household membership is active."
+    },
+    {
+      "sku": "NOTES-SAGE",
+      "name": "Sage field notes",
+      "price": 18,
+      "memberPrice": 0,
+      "type": "digital",
+      "gated": true,
+      "image": "/images/notebook.jpg",
+      "blurb": "A short digital playbook for running a one-person shop with agents.",
+      "details": "Included with Household membership. One-time purchase unlocks the same file. The Content Agent revises it monthly. You download it from the member page after payment."
+    }
+  ],
+  "plans": [
+    {
+      "id": "browse",
+      "name": "Browse",
+      "price": 0,
+      "cadence": "free",
+      "pitch": "Look around. No account required.",
+      "includes": ["Full catalog", "Plain prices", "Email checkout receipt"]
+    },
+    {
+      "id": "household",
+      "name": "Household",
+      "price": 12,
+      "cadence": "month",
+      "pitch": "The reasonable paywall. Early drops and member prices.",
+      "includes": ["Member prices on goods", "Sage field notes included", "Early access to the next drop", "One support thread with the Customer Agent"]
+    },
+    {
+      "id": "atelier",
+      "name": "Atelier",
+      "price": 36,
+      "cadence": "month",
+      "pitch": "For people who want the shop to remember them.",
+      "includes": ["Everything in Household", "Free shipping over $40", "A quarterly reserved piece", "Refund window extended to 30 days"]
+    }
+  ]
+}

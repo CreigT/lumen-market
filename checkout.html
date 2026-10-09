@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Lumen Market</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="shop">
+  <main class="wrap section">
+    <form class="split" data-checkout>
+      <div>
+        <p class="kicker">Checkout</p>
+        <h1>Tell us where it goes.</h1>
+        <p class="lede">If Stripe variables are set, this opens Stripe. If they are not, you stay in demo mode and no card is charged.</p>
+        <label>Email</label>
+        <input name="email" type="email" required placeholder="you@example.com">
+        <label>Name</label>
+        <input name="name" required placeholder="Your name">
+        <input type="hidden" name="sku">
+        <input type="hidden" name="plan">
+        <p data-error class="bad"></p>
+        <button class="btn" type="submit">Continue</button>
+      </div>
+      <aside class="card">
+        <h3>What happens next</h3>
+        <p>The Sales Agent records the intent. The Treasury Agent does not capture money until Stripe says the session is paid.</p>
+        <p class="muted">High-impact refunds still go through the approval policy. This page only starts a purchase.</p>
+      </aside>
+    </form>
+  </main>
+  <script src="/config.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>
