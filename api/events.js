@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const { appendToSales } = require("./sheet");
 
 function readJson(req) {
   return new Promise((resolve, reject) => {
@@ -24,6 +25,20 @@ module.exports = async function handler(req, res) {
     payload: body.payload || {}
   };
   console.log(JSON.stringify({ layer: "commerce", channel: "storefront", ...event }));
+
+  const sheetId = process.env.MONEY_LOOP_SHEET_ID || "";
+  const amount = Number(event.payload?.amount || event.payload?.total || 0);
+  if (sheetId && (event.type === "storefront.checkout.paid" || amount > 0)) {
+    const sku = event.payload?.sku || event.payload?.product || "";
+    if (amount > 0) {
+      await appendToSales(sheetId, {
+        date: event.at,
+        sku,
+        amount,
+        source: event.source || "storefront"
+      });
+    }
+  }
 
   if (process.env.AGENT_WEBHOOK_URL) {
     await fetch(process.env.AGENT_WEBHOOK_URL, {

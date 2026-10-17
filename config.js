@@ -85,6 +85,7 @@ window.LUMEN = {
     "refundDays": 14,
     "atelierRefundDays": 30,
     "autoRefundMax": 25,
-    "memberDiscount": 0.1
+    "memberDiscount": 0.1,
+    "moneyLoopSheetId": ""
   }
 };

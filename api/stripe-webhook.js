@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const { appendToSales } = require("./sheet");
 
 function readRaw(req) {
   return new Promise((resolve, reject) => {
@@ -28,5 +29,21 @@ module.exports = async function handler(req, res) {
     id: event.id,
     at: new Date().toISOString()
   }));
+
+  const sheetId = process.env.MONEY_LOOP_SHEET_ID || "";
+  if (sheetId && (event.type === "checkout.session.completed" || event.type === "charge.succeeded")) {
+    const obj = event.data?.object || {};
+    const amount = (obj.amount_total || obj.amount || 0) / 100;
+    if (amount > 0) {
+      const sku = obj.metadata?.sku || obj.metadata?.product || obj.description || "";
+      await appendToSales(sheetId, {
+        date: new Date().toISOString(),
+        sku,
+        amount,
+        source: "stripe"
+      });
+    }
+  }
+
   res.status(200).json({ received: true });
 };
